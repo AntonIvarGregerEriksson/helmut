@@ -1,0 +1,6 @@
+<footer class="footer text-muted mt-5">
+  {{ $bootstrapJs := resources.Get "js/bootstrap.bundle.min.js" }}
+  {{ $js := slice $bootstrapJs | resources.Concat "_js/bundle.js" | resources.Minify | resources.Fingerprint }}
+
+  <script src="{{ $js.RelPermalink }}" defer></script>
+</footer>

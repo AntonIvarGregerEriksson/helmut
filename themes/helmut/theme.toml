@@ -1,0 +1,16 @@
+name = "helmut-jederknuller"
+license = "UNLICENSED"
+description = ""
+tags = []
+features = []
+min_version = "0.124.0"
+
+[author]
+  name = "Olle Vidner"
+  homepage = "https://github.com/ovidner"
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""

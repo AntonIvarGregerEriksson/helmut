@@ -1,0 +1,27 @@
+baseURL = 'https://jederknuller.org/'
+languageCode = 'en-us'
+title = 'Helmut Jederknüller mit seinem Super Stereo à gogo Orchester'
+theme = 'helmut'
+
+defaultContentLanguage = "en"
+
+[languages.en]
+weight = 0
+languageName = "English"
+[languages.en.params]
+linkText = "in English"
+
+[languages.de]
+weight = 1
+languageName = "Deutsch"
+[languages.de.params]
+linkText = "auf Deutsch"
+
+[[module.mounts]]
+source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+target = "assets/js/bootstrap.bundle.min.js"
+
+[[module.mounts]]
+source = "node_modules/@fortawesome/fontawesome-free/webfonts"
+target = "static/assets/fonts"
+excludeFiles = ["fa-v4compatibility.*"]
