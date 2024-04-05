@@ -1,0 +1,25 @@
+<head>
+  <title>{{ .Title }}</title>
+  <meta charset="utf-8">
+  <meta name="description" content="{{ .Site.Title }}" />
+  <meta name="dc.relation" content="{{ .Site.BaseURL }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#1A94D2" />
+
+  {{ $options := (dict "targetPath" "assets/bundle.css" "outputStyle" "compressed") }}
+  {{ $style := resources.Get "sass/main.scss" | toCSS $options | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=block"
+    rel="stylesheet">
+  <!--
+      include a favicon for your site if you have it, else omit the line below
+      Location of favicon can be in mytheme/static/favicon.ico
+  -->
+  <!-- <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' /> -->
+
+
+</head>

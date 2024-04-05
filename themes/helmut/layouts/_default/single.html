@@ -1,0 +1,7 @@
+{{ define "main" }}
+<div class="container flex-fill">
+  <h1>{{ .Title }}</h1>
+  {{ if .Description }}<p class="lead">{{ .Description }}</p>{{ end }}
+  {{ .Content }}
+</div>
+{{ end }}
