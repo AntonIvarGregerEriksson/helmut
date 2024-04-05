@@ -7,6 +7,14 @@
         {{- partial "header.html" . -}}
         {{- block "main" . }}{{- end }}
     </div>
+    {{ range .Pages }}
+    <div class="{{ .Params.class }}">
+        <div class="container p-5">
+            <h2 class="display-1">{{ .Title }}</h2>
+            {{ .Content }}
+        </div>
+    </div>
+    {{ end }}
     <!-- Footer is outside the flexbox to put it under the fold -->
     {{- partial "footer.html" . -}}
 </body>

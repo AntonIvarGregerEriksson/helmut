@@ -1,8 +1,4 @@
 <footer class="footer text-muted mt-5">
-  <div class="container">
-    <p class="small text-muted">© Olle Vidner 2022</p>
-  </div>
-
   {{ $bootstrapJs := resources.Get "js/bootstrap.bundle.min.js" }}
   {{ $js := slice $bootstrapJs | resources.Concat "_js/bundle.js" | resources.Minify | resources.Fingerprint }}
 
