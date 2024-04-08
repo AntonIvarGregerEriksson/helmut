@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main class="container flex-fill d-flex align-items-center">
   <div class="row align-items-center">
-    {{ $logo := (resources.Get "images/helmutlogo_long.pdf.png") }}
+    {{ $logo := (resources.Get "images/helmutlogo_long_black.svg") }}
     <img src="{{ $logo.RelPermalink }}" width="500" class="pb-5 pt-5" alt="Logo" />
     {{ $poster := (resources.Get "images/AffischRelease2024.png") }}
     <img src="{{ $poster.RelPermalink }}" width="500" alt="Logo" />
